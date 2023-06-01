@@ -45,6 +45,20 @@ class ComposeFragment : Fragment() {
   companion object {
     const val COMPOSABLE_NAME = "composableName"
   }
+
+  @Composable
+  fun ComposeScreenA() {
+    Surface {
+      Column {
+        Text(text = "Compose Screen A")
+        Button(onClick = {
+          // Navigate
+        }) {
+          Text(text = "Go to Compose Screen B")
+        }
+      }
+    }
+  }
 }
 
 fun Fragment.content(content: @Composable () -> Unit): ComposeView {
