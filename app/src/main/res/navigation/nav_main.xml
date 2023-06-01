@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main.xml"
+    app:startDestination="@id/fragmentA">
+
+  <fragment
+      android:id="@+id/fragmentA"
+      android:name="com.example.incrementalnav.FragmentA"
+      android:label="FragmentA" >
+    <action
+        android:id="@+id/action_fragmentA_to_fragmentB"
+        app:destination="@id/fragmentB" />
+  </fragment>
+  <fragment
+      android:id="@+id/fragmentB"
+      android:name="com.example.incrementalnav.FragmentB"
+      android:label="FragmentB" >
+    <action
+        android:id="@+id/action_fragmentB_to_composeFragmentA2"
+        app:destination="@id/composeFragmentA" />
+  </fragment>
+  <fragment
+      android:id="@+id/composeFragmentA"
+      android:name="com.example.incrementalnav.ComposeFragment"
+      android:label="ComposeFragment" >
+    <argument
+        android:name="composableName"
+        app:argType="string" />
+  </fragment>
+</navigation>
